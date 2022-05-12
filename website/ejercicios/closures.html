@@ -10,7 +10,46 @@
     <script>
       // Closures
       // printColor
-
+//      (function(){
+//        let color = "green";
+//        function printColor(){
+//          console.log(color);
+//        }
+//      })();
+//      function makeColorPrinter(color){
+ //       let colorMessage = "The color is ${color}";
+//        return function() {
+//          console.log(colorMessage)
+//        }
+//      }
+//      let greenColorPrinter = makeColorPrinter("Green")
+//const countr = {
+//  count: 3,
+//};
+//console.log(countr.count);
+function makeCounter(n){
+  let count = n;
+  return{
+    increase: function () {
+      count= count +1 ;
+    },
+    decrease: function () {
+      count = count -1 ;
+    },
+    getCount: function () {
+      return count;
+    },
+  };
+}
+let countr = makeCounter(7);
+console.log(" El numero  es:", countr.getCount());
+countr.increase();
+console.log(" El numero  es:", countr.getCount());
+countr.decrease();
+countr.decrease();
+countr.decrease();
+countr.decrease();
+console.log(" El numero  es:", countr.getCount());
       // IIFE
       // (function() {
       //   let color = 'green';
